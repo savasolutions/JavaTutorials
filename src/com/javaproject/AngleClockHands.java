@@ -33,11 +33,12 @@ public class AngleClockHands {
        Scanner obj1=new Scanner(System.in);
        AngleClockHands obj2=new AngleClockHands();
 
-       System.out.println("Enter the time");
-        System.out.println("Hour");
-        String hr=obj2.getString(obj1);
-        System.out.println("Minute");
-        String min=obj2.getString(obj1);
+       System.out.println("Enter the time (hh:mm)");
+        String time,hr,min;
+        time=obj2.getString(obj1);
+        String timeSplit[]=time.split(":");
+        hr=timeSplit[0];
+        min=timeSplit[1];
         int h=obj2.stringToInt(hr);
         int m=obj2.stringToInt(min);
         int angle=obj2.computeAngle(h,m);
