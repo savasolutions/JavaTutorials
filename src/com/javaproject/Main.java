@@ -1,29 +1,41 @@
 // program to find the sum of digits
 package com.javaproject;
 
+import java.util.Scanner;
+
 public class Main {
-    int sum;
-    Main(int num)
-    {
-       sum=sumDigits(num);
-    }
-    public int sumDigits(int num)
-    {
-        int sum=0;
-        int digit;
-        while (num>0)
-        {
-            digit=num%10;
-            sum=sum+digit;
-            num=num/10;
-        }
-        return sum;
 
+    Main()
+    {
+        System.out.println("Welcome");
     }
 
-    public static void main(String[] args) {
-        int number=1024;
-        Main obj1=new Main(number);
-        System.out.print("Sum of digits in number "+number+" is "+obj1.sum);
+    public int stringToInt(String str)
+    {
+        int integer=Integer.parseInt(str);
+        return integer;
     }
+    public void print(String str)
+    {
+        System.out.println(str);
+    }
+    public void print(int str)
+    {
+        System.out.println(str);
+    }
+    public String getString()
+    {
+        Scanner obj1=new Scanner(System.in);
+        String str=obj1.nextLine();
+        return str;
+    }
+    public int getInt()
+    {
+        Scanner obj1=new Scanner(System.in);
+        String str=obj1.nextLine();
+        int num=stringToInt(str);
+        return num;
+    }
+
+
 }
